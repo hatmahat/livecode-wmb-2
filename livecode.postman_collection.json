@@ -1,0 +1,1129 @@
+{
+	"info": {
+		"_postman_id": "5a90bcc5-079d-4e58-aeac-60cd5dee0457",
+		"name": "livecode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21765546"
+	},
+	"item": [
+		{
+			"name": "1. Master Menu (CRUD)",
+			"item": [
+				{
+					"name": "CREATE_MENU",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"menuName\": \"Ayam Bakar\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ_MENU",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_MENU",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/menu/update?old_menu_name=Ayam Bakar&new_menu_name=Ayam Update",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"menu",
+								"update"
+							],
+							"query": [
+								{
+									"key": "old_menu_name",
+									"value": "Ayam Bakar"
+								},
+								{
+									"key": "new_menu_name",
+									"value": "Ayam Update"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_MENU",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/menu/delete?menu_name=Ayam Update",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"menu",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "menu_name",
+									"value": "Ayam Update"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2. Master Menu Price (CRUD)",
+			"item": [
+				{
+					"name": "CREATE_MENU_PRICE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"menu\": {\r\n        \"menuName\": \"Ayam B\"\r\n    },\r\n    \"price\" : 7700\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/menu_price",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"menu_price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ_MENU_PRICE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/menu_price",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"menu_price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_MENU_PRICE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/menu_price/delete?menu_id=50",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"menu_price",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "menu_id",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_MENU_PRICE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\": 16,\r\n    \"price\" : 77\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/menu_price/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"menu_price",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3. Master Table (CRUD)",
+			"item": [
+				{
+					"name": "CREATE_TABLE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TableDescription\": \"5th table\",\r\n    \"IsAvailable\": false\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/table",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ_TABLE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/table",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_TABLE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/table/delete?id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"table",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_TABLE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"ID\":2,\r\n    \"TableDescription\": \"2nd table\",\r\n    \"IsAvailable\": true\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/table/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"table",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4. Master Trans Type (CRUD)",
+			"item": [
+				{
+					"name": "CREATE_TRANS_TYPE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"DI\",\r\n    \"description\": \"Dine In\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/trans_type",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"trans_type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_TRANS_TYPE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/trans_type/delete?trans_type_id=DI",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"trans_type",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "trans_type_id",
+									"value": "DI"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_TRANS_TYPE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"EI\",\r\n    \"description\": \"Eat In ++ Updated\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/trans_type/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"trans_type",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ_TRANS_TYPE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/trans_type",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"trans_type"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "5. Master Discount (CRUD)",
+			"item": [
+				{
+					"name": "CREATE_DISCOUNT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Description\": \"old year discount\",\r\n    \"pct\": 0.9\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/discount",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"discount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_DISCOUNT",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\": 3,\r\n    \"Description\": \"new year discount again and again\",\r\n    \"Pct\": 0.3\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/discount/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"discount",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ_DISCOUNT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/discount",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"discount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_DISCOUNT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/discount/delete?id=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"discount",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "6. Customer Registration",
+			"item": [
+				{
+					"name": "REGISTER_CUSTOMER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CustomerName\": \"Bruce Wayne\",\r\n    \"MobilePhoneNo\": \"6896897\",\r\n    \"IsMember\": false\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ_CUSTOMER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "7. Customer Member Activation",
+			"item": [
+				{
+					"name": "REGISTER_CUSTOMER",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\":1,\r\n    \"Discounts\": {\r\n        \"Description\": \"new year discount again\",\r\n        \"Pct\": 0.2\r\n    },\r\n    \"IsMember\": true\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/customer/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"customer",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ_CUSTOMER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "8. Transaksi Penjualan",
+			"item": [
+				{
+					"name": "CREATE_BILL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"Customer\": {\r\n    \"CustomerName\": \"Bruce Wayne\",\r\n    \"MobilePhoneNo\": \"6896897\",\r\n    \"IsMember\": true\r\n    },\r\n    \"Table\": {\r\n    \"TableDescription\": \"4th table\",\r\n    \"IsAvailable\": false\r\n    },\r\n    \"TransTypeID\": \"EI\",\r\n    \"TransType\": {\r\n        \"Id\": \"EI\",\r\n        \"Description\": \"Eat In\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/bill",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"bill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ_BILL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/bill",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"bill"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "9. Mencetak Bill Berdasarkan bill_id",
+			"item": [
+				{
+					"name": "CREATE_BILL_DETAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"MenuPrice\": {\r\n    \"menu\": {\"menuName\": \"Ayam Geprek\"},\r\n    \"price\" : 15000}\r\n    ,\r\n    \"quantity\": 2\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/bill_detail",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"bill_detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ_BILL_DETAIL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/bill_detail",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"bill_detail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "For Development Only",
+			"item": [
+				{
+					"name": "m_menu",
+					"item": [
+						{
+							"name": "CREATE_MENU",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"menuName\": \"Ayam Crispy\"\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8888/menu",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"menu"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "READ_MENU",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/menu",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"menu"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE_MENU",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/menu/update?old_menu_name=Ayam Geprek $$&new_menu_name=SSS",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"menu",
+										"update"
+									],
+									"query": [
+										{
+											"key": "old_menu_name",
+											"value": "Ayam Geprek $$"
+										},
+										{
+											"key": "new_menu_name",
+											"value": "SSS"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE_MENU",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/menu/delete?menu_name=Ayam Crispy",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"menu",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "menu_name",
+											"value": "Ayam Crispy"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "m_menu_price",
+					"item": [
+						{
+							"name": "CREATE_MENU_PRICE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"menu\": {\r\n        \"ID\": 20,\r\n        \"menuName\": \"TEST UPDATE\"\r\n    },\r\n    \"price\" : 999999\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8888/menu_price",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"menu_price"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "READ_MENU_PRICE",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/menu_price",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"menu_price"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE_MENU_PRICE",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/menu_price/delete?menu_id=10",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"menu_price",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "menu_id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE_MENU_PRICE",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"menuId\": 20,\r\n    \"menu\": {\r\n        \"ID\": 20,\r\n        \"menuName\": \"TEST UPDATE 2\"\r\n    },\r\n    \"price\" : 8888\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8888/menu_price/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"menu_price",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "t_bill_detail",
+					"item": [
+						{
+							"name": "CREATE_BILL_DETAIL",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"MenuPrice\":\r\n    {\r\n    \"menu\": {\"menuName\": \"Ayam Geprek\"},\r\n    \"price\" : 15000\r\n    },\r\n    \"quantity\": 2\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8888/bill_detail",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"bill_detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "READ_BILL_DETAIL",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/bill_detail",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"bill_detail"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "t_bill",
+					"item": [
+						{
+							"name": "CREATE_BILL",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \r\n    \"Customer\": {\r\n    \"CustomerName\": \"Bruce Wayne\",\r\n    \"MobilePhoneNo\": \"6896897\",\r\n    \"IsMember\": true\r\n    },\r\n    \"Table\": {\r\n    \"TableDescription\": \"4th table\",\r\n    \"IsAvailable\": false\r\n    },\r\n    \"TransTypeID\": \"EI\",\r\n    \"TransType\": {\r\n        \"Id\": \"EI\",\r\n        \"Description\": \"Eat In\"\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8888/bill",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"bill"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "READ_BILL",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/bill",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"bill"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "m_table",
+					"item": [
+						{
+							"name": "CREATE_TABLE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"TableDescription\": \"third table\",\r\n    \"IsAvailable\": false\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8888/table",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"table"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "READ_TABLE",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/table",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"table"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "m_trans_type",
+					"item": [
+						{
+							"name": "CREATE_TRANS_TYPE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Id\": \"TA\",\r\n    \"description\": \"Take Away\"\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8888/trans_type",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"trans_type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "READ_TRANS_TYPE",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/trans_type",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"trans_type"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "m_customer",
+					"item": [
+						{
+							"name": "CREATE_CUSTOMER",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerName\": \"Bruce Wayne\",\r\n    \"MobilePhoneNo\": \"6896897\",\r\n    \"IsMember\": true\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8888/customer",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "READ_CUSTOMER",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/customer",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "m_discount",
+					"item": [
+						{
+							"name": "CREATE_DISCOUNT",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Description\": \"new year discount\",\r\n    \"pct\": 0.1\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8888/discount",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"discount"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "READ_DISCOUNT",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8888/discount",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"discount"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
