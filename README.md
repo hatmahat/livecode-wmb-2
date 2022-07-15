@@ -14,4 +14,6 @@ set GRPC_URL=localhost:8888
 ## run go
 ```
 go run .
-```
+```  
+## lopei server  
+https://github.com/hatmahat/lopei-grpc-server
