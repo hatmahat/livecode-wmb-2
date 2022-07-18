@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "7228e45c-2231-4b25-865a-617f9bbca923",
+		"name": "livecodelast",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21765546"
+	},
+	"item": [
+		{
+			"name": "livecode-last",
+			"item": [
+				{
+					"name": "1. Master Menu (CRUD) Copy",
+					"item": [
+						{
+							"name": "CREATE_MENU",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"menuName\": \"Ayam Bakar\"\r\n}"
+								},
+								"url": {
+									"raw": "localhost:8181/api/master/menu",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"api",
+										"master",
+										"menu"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "READ_MENU",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8181/api/master/menu",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"api",
+										"master",
+										"menu"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE_MENU",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "localhost:8181/api/master/menu/update?old_menu_name=Ayam Bakar&new_menu_name=Ayam Update",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"api",
+										"master",
+										"menu",
+										"update"
+									],
+									"query": [
+										{
+											"key": "old_menu_name",
+											"value": "Ayam Bakar"
+										},
+										{
+											"key": "new_menu_name",
+											"value": "Ayam Update"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE_MENU",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8181/api/master/menu/delete?menu_name=Ayam Update",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"api",
+										"master",
+										"menu",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "menu_name",
+											"value": "Ayam Update"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc1MDc2NzQsImlhdCI6MTY1NzUwNzYxNCwiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJlbmlnbWEiLCJFbWFpbCI6IiJ9.zCsJ-9IwUNXqXpJleeMLNHdTJoNJJ8BVbvvB_bWhlFQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "87654321",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"enigma\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8181/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN TEST",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTgxMDI2MDEsImlhdCI6MTY1ODEwMjU0MSwiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJlbmlnbWEiLCJFbWFpbCI6IiIsIkFjY2Vzc1VVSUQiOiJmMGU3ZTBlOS1hYWNiLTQ0M2QtOGNjZi02MjQ1MTIxNWUxMTYifQ.oj8URC2hZ9XZG9ElRdsRV3a9NifEyoIizbIzM9CMBDA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8181/api/master/test",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"master",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lopei",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc4MTM3NTgsImlhdCI6MTY1NzgxMzY5OCwiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJlbmlnbWEiLCJFbWFpbCI6IiIsIkFjY2Vzc1VVSUQiOiIyYjQ4MTRlMC0xMzE1LTQyNWUtODhmYS1mOTk5NmQzOGQ1ZWMifQ.IfZCDITIjDlpmpoFjBUmW2TwtkXy_ytOj8VS3-vP80s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "id",
+								"value": "3",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8181/api/master/lopei?id=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"master",
+								"lopei"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
